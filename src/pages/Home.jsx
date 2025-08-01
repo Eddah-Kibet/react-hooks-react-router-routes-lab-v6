@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import MovieCard from "../components/MovieCard";
+import { Route } from "react-router-dom";
 
 function Home() {
   const [movies, setMovies] = useState([]);
@@ -18,12 +19,12 @@ function Home() {
         <NavBar />
       </header>
       <main>
-        <h1>Home Page</h1>
-        <section className="movie-list">
-          {movies.map((movie) => (
-            <MovieCard key={movie.id} title={movie.title} id={movie.id} />
-          ))}
-        </section>
+          <h1>Home Page</h1>
+          <section className="movie-list">
+            {movies.map((movie) => (
+              <MovieCard key={movie.id} title={movie.title} id={movie.id} />
+            ))}
+          </section>
       </main>
     </>
   );

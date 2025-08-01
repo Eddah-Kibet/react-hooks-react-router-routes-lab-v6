@@ -35,11 +35,11 @@ function Movie() {
     <>
       <header>
         <NavBar />
+        <h1>{movie.title}</h1>
       </header>
       <main>
-        <h1>{movie.title}</h1>
-        <p>Time: {movie.time}</p>
         <div>
+        <p>Time: {movie.time}</p>
           {movie.genres && movie.genres.map((genre, index) => (
             <span key={index} style={{ marginRight: '10px' }}>{genre}</span>
           ))}
